@@ -277,8 +277,6 @@ run_renovate() {
 
   configfile_extension="${configfile##*.}"
 
-  echo "configfile_extension='$configfile_extension'"
-
   internal_configfile="/usr/src/app/config.${configfile_extension}"
 
   # set -x
