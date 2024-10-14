@@ -281,6 +281,7 @@ run_renovate() {
 
   internal_configfile="/usr/src/app/config.${configfile_extension}"
 
+  # set -x
   "${container_engine:-docker}" run \
     --rm \
     -i \
@@ -291,6 +292,7 @@ run_renovate() {
     "${image}" \
     "$@" \
     | sed -Ee "s|${internal_configfile}|$configfile|g"
+  # set +x
 }
 
 
