@@ -281,7 +281,7 @@ run_renovate() {
 
   internal_configfile="/usr/src/app/config.${configfile_extension}"
 
-  echo "${container_engine:-docker}" run \
+  "${container_engine:-docker}" run \
     --rm \
     -i \
     "$([ -t 0 ] && echo "-t")" \
